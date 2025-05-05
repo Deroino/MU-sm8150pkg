@@ -930,30 +930,12 @@ DeviceBootManagerPriorityBoot (
   //   4. AltDeviceBoot                load alternate boot order
   //   5. Both indicators are present  Load NetworkUnlock
 
-  if (BootloaderMenuBoot) {
-    // Bootloader Menu Option
-    DEBUG ((DEBUG_INFO, "[Bds] enter Bootloader Menu\n"));
-    Status = SdBootOptionsLibGetBootloaderMenu (BootOption, "VOL+");
-  } else if (UFPBoot) {
+  if (BootloaderMenuBoot || UFPBoot) {
+    Status = EFI_NOT_FOUND;
+  } else {
     // UFP Boot Option
     DEBUG ((DEBUG_INFO, "[Bds] enter UFP\n"));
     Status = SdBootOptionsLibGetUFPMenu (BootOption, "VOL-");
-  } else if (AltDeviceBoot) {
-    // Alternate boot or Network Unlock option
-    if (FrontPageBoot) {
-      DEBUG ((DEBUG_INFO, "[Bds] both detected. NetworkUnlock\n"));
-      Status = MsBootOptionsLibGetDefaultBootApp (BootOption, "NS");
-    } else {
-      DEBUG ((DEBUG_INFO, "[Bds] alternate boot\n"));
-      Status = MsBootOptionsLibGetDefaultBootApp (BootOption, "MA");
-    }
-  } else if (FrontPageBoot) {
-    // Front Page Boot Option
-    DEBUG ((DEBUG_INFO, "[Bds] enter Front Page\n"));
-    Status = MsBootOptionsLibGetBootManagerMenu (BootOption, "VOL+");
-    SetRebootReason (OEM_REBOOT_TO_SETUP_KEY);
-  } else {
-    Status = EFI_NOT_FOUND;
   }
 
   return Status;
