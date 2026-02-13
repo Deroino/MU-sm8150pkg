@@ -13,3 +13,6 @@ gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosProcessorRetailModel|"SM8150-AC"
 gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdSmbiosBoardModel|"K82"
 
 gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdABLProduct|"Xiaomi Pad 5"
+
+# Storage - Use UFS2 mode for expanded storage (扩容机)
+gSurfaceDuoFamilyPkgTokenSpaceGuid.PcdStorageHasUFS3|0
