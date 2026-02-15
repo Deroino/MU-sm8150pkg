@@ -10,7 +10,7 @@
   INF MsCorePkg/MuCryptoDxe/MuCryptoDxe.inf
   INF MsCorePkg/MuVarPolicyFoundationDxe/MuVarPolicyFoundationDxe.inf
   INF MsGraphicsPkg/DisplayEngineDxe/DisplayEngineDxe.inf
-  INF MsGraphicsPkg/GopOverrideDxe/GopOverrideDxe.inf
+  # INF MsGraphicsPkg/GopOverrideDxe/GopOverrideDxe.inf  # disabled for screen debug
   INF MsGraphicsPkg/MsEarlyGraphics/Dxe/MsEarlyGraphics.inf
   INF MsGraphicsPkg/MsUiTheme/Dxe/MsUiThemeProtocol.inf
   INF MsGraphicsPkg/OnScreenKeyboardDxe/OnScreenKeyboardDxe.inf
