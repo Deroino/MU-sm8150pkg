@@ -795,10 +795,11 @@ DeviceBootManagerAfterConsole (
 
   PlatformPowerLevelCheck ();
 
-  Status = DisplayBootGraphic (BG_SYSTEM_LOGO);
-  if (EFI_ERROR (Status) != FALSE) {
-    DEBUG ((DEBUG_ERROR, "%a Unabled to set graphics - %r\n", __FUNCTION__, Status));
-  }
+  // Disabled for screen serial debug - prevent logo from covering debug text
+  // Status = DisplayBootGraphic (BG_SYSTEM_LOGO);
+  // if (EFI_ERROR (Status) != FALSE) {
+  //   DEBUG ((DEBUG_ERROR, "%a Unabled to set graphics - %r\n", __FUNCTION__, Status));
+  // }
 
   ConsoleMsgLibDisplaySystemInfoOnConsole ();
 
