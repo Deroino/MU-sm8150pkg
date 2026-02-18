@@ -16,7 +16,7 @@ INF Cambria/BOOT.XF.3.0.1-00243-SC8180XWZB-2/QcomPkg/Drivers/UsbInitDxe/UsbInitD
 INF Cambria/BOOT.XF.3.0.1-00243-SC8180XWZB-2/QcomPkg/Drivers/UsbMsdDxe/UsbMsdDxe.inf
 INF Cambria/BOOT.XF.3.0.1-00243-SC8180XWZB-2/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
 INF Cambria/BOOT.XF.3.0.1-00243-SC8180XWZB-2/QcomPkg/Drivers/XhciPciEmulationDxe/XhciPciEmulationDxe.inf
-INF AndromedaPkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
+INF SurfaceDuoFamilyPkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
 
 #INF MdeModulePkg/Core/Dxe/DxeMain.inf
 #INF ArmPkg/Drivers/CpuDxe/CpuDxe.inf
@@ -482,4 +482,3 @@ FILE FREEFORM = 09E3EE50-AD75-408D-AC44-561792AB6E35 {
     SECTION UI = "SUNWODA.K82.BATTERY.PROVISION"
     SECTION RAW = SurfaceDuo1Pkg/Device/$(TARGET_DEVICE)/Binaries/RawFiles/SUNWODA.K82.BATTERY.PROVISION
 }
-
